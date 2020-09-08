@@ -1,0 +1,6 @@
+So vai gerar o ctrato se for estagio
+vaga para candidatura n para n
+Contrato clt e por conta da pessoa
+Tabela Genero
+Tabela status contrato
+Tabela categoria
