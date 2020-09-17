@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InovaWebApi</name>
+    </assembly>
+    <members>
+        <member name="T:InovaWebApi.Controllers.EmpresaController">
+            <summary>
+            Controller responsável pelos endpoints referentes a empresa
+            </summary>
+        </member>
+        <member name="M:InovaWebApi.Controllers.EmpresaController.Post(InovaWebApi.Domains.Empresa)">
+            <summary>
+            Cadastra uma empresa
+            </summary>
+            <param name="novaEmpresa">Objeto com as informações</param>
+            <returns>Um status code 201 - Created</returns>
+            <response code="201">Retorna apenas o status code Created</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Empresa
+        </member>
+        <member name="M:InovaWebApi.Controllers.EmpresaController.Get">
+            <summary>
+            Lista todas as empresas
+            </summary>
+            <returns>Uma lista de empresas e um status code 200 - Ok</returns>
+            <response code="200">Retorna uma lista de empresas</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Empresa
+        </member>
+        <member name="M:InovaWebApi.Controllers.EmpresaController.GetById(System.Int32)">
+            <summary>
+            Busca uma empresa através do ID
+            </summary>
+            <param name="id">ID do empresa que será buscado</param>
+            <returns>Um empresa buscado e um status code 200 - Ok</returns>
+            <response code="200">Retorna o empresa buscado</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Empresa/id
+        </member>
+        <member name="M:InovaWebApi.Controllers.EmpresaController.Put(System.Int32,InovaWebApi.Domains.Empresa)">
+            <summary>
+            Altera o status de uma empresa
+            </summary>
+            <param name="id">ID da presença que terá a situação alterada</param>
+            <param name="empresaAtualizada">Objeto com o parâmetro que atualiza o situação da presença para Confirmada, Não confirmada ou Recusada</param>
+            <returns>Um status code 204 - No Content</returns>
+            <response code="204">Retorna apenas o status code No Content</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Empresa/id
+        </member>
+        <member name="M:InovaWebApi.Controllers.EmpresaController.Delete(System.Int32)">
+            <summary>
+            Deleta uma Empresa
+            </summary>
+            <param name="id">ID do empresa que será deletado</param>
+            <returns>Um status code 202 - Accepted</returns>
+            <response code="202">Retorna apenas o status code Accepted</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Empresa/id
+        </member>
+        <member name="M:InovaWebApi.Controllers.EmpresaController.GetByAlphabetical">
+            <summary>
+            Lista todas as empresas em ordem alfabetica
+            </summary>
+            <returns>Uma lista de tipos de empresa e um status code 200 - Ok</returns>
+            <response code="200">Retorna uma lista de tipos de empresa</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Empresa
+        </member>
+        <member name="M:InovaWebApi.Controllers.TipoRespostaController.Get">
+            <summary>
+            Lista todos os tipos respostas
+            </summary>
+            <returns>Uma lista de tipos de resposta e um status code 200 - Ok</returns>
+            <response code="200">Retorna uma lista de tipos de tipo resposta</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/TipoResposta
+        </member>
+        <member name="M:InovaWebApi.Controllers.TipoRespostaController.GetById(System.Int32)">
+            <summary>
+            Busca um tipo resposta através do ID
+            </summary>
+            <param name="id">ID do tipo resposta que será deletado</param>
+            <returns>Um status code 202 - Accepted</returns>
+            <response code="202">Retorna apenas o status code Accepted</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/TipoResposta/id
+        </member>
+        <member name="M:InovaWebApi.Controllers.TipoRespostaController.Post(InovaWebApi.Domains.TipoResposta)">
+            <summary>
+            Cadastra um tipo resposta
+            </summary>
+            <param name="novoTipoResposta">Objeto com as informações</param>
+            <returns>Um status code 201 - Created</returns>
+            <response code="201">Retorna apenas o status code Created</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/TipoResposta
+        </member>
+        <member name="M:InovaWebApi.Controllers.TipoRespostaController.Delete(System.Int32)">
+            <summary>
+            Deleta um tipo resposta
+            </summary>
+            <param name="id">ID do tipo resposta que será deletado</param>
+            <returns>Um status code 202 - Accepted</returns>
+            <response code="202">Retorna apenas o status code Accepted</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/TipoResposta/id
+        </member>
+        <member name="M:InovaWebApi.Controllers.TurnoController.Post(InovaWebApi.Domains.Turno)">
+            <summary>
+            Cadastra um turno
+            </summary>
+            <param name="novoTurno">Objeto com as informações</param>
+            <returns>Um status code 201 - Created</returns>
+            <response code="201">Retorna apenas o status code Created</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Turno
+        </member>
+        <member name="M:InovaWebApi.Controllers.TurnoController.Get">
+            <summary>
+            Lista todos os turnos
+            </summary>
+            <returns>Uma lista de tipos de turno e um status code 200 - Ok</returns>
+            <response code="200">Retorna uma lista de tipos de turno</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Turno
+        </member>
+        <member name="M:InovaWebApi.Controllers.TurnoController.GetById(System.Int32)">
+            <summary>
+            Busca um turno através do ID
+            </summary>
+            <param name="id">ID do turno que será deletado</param>
+            <returns>Um status code 202 - Accepted</returns>
+            <response code="202">Retorna apenas o status code Accepted</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Turno/id
+        </member>
+        <member name="M:InovaWebApi.Controllers.TurnoController.Put(System.Int32,InovaWebApi.Domains.Turno)">
+            <summary>
+            Altera o status de um turno
+            </summary>
+            <param name="id">ID do turno que terá a situação alterada</param>
+            <param name="turnoatualizado">Objeto com o parâmetro que atualiza o situação da presença para Confirmada, Não confirmada ou Recusada</param>
+            <returns>Um status code 204 - No Content</returns>
+            <response code="204">Retorna apenas o status code No Content</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Turno/id
+        </member>
+        <member name="M:InovaWebApi.Controllers.TurnoController.Delete(System.Int32)">
+            <summary>
+            Deleta um turno
+            </summary>
+            <param name="id">ID do turno que será deletado</param>
+            <returns>Um status code 202 - Accepted</returns>
+            <response code="202">Retorna apenas o status code Accepted</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Turno/id
+        </member>
+        <member name="M:InovaWebApi.Interfaces.IEmpresaRepository.Cadastrar(InovaWebApi.Domains.Empresa)">
+            <summary>
+            Cadastra uma nova empresa
+            </summary>
+            <param name="novaEmpresa">Objeto com as informações de cadastro</param>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.IEmpresaRepository.Listar">
+            <summary>
+            Lista todos as empresas
+            </summary>
+            <returns>Uma lista de empresa</returns>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.IEmpresaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma empresa por ID
+            </summary>
+            <param name="id">ID do empresa que será buscado</param>
+            <returns>Uma empresa buscado</returns>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.IEmpresaRepository.Atualizar(System.Int32,InovaWebApi.Domains.Empresa)">
+            <summary>
+            Atualiza uma empresa existente
+            </summary>
+            <param name="id">ID do empresa que será atualizado</param>
+            <param name="empresaAtualizada">Objeto com as novas informações</param>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.IEmpresaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma empresa
+            </summary>
+            <param name="id">ID do empresa que será deletado</param>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.IEmpresaRepository.ListarPorOrdemAlfabetica">
+            <summary>
+            Lista todos as empresas em ordem alfabetica
+            </summary>
+            <returns>Uma lista de empresa</returns>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.ITipoRespostaRepository.Cadastrar(InovaWebApi.Domains.TipoResposta)">
+            <summary>
+            Cadastra um novo tipo resposta
+            </summary>
+            <param name="novoTipoResposta">Objeto com as informações de cadastro</param>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.ITipoRespostaRepository.Listar">
+            <summary>
+            Lista todos os tipos resposta
+            </summary>
+            <returns>Uma lista de tipo resposta</returns>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.ITipoRespostaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um tipo resposta por ID
+            </summary>
+            <param name="id">ID do tipo resposta que será buscado</param>
+            <returns>Um tipo resposta buscado</returns>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.ITipoRespostaRepository.Atualizar(System.Int32,InovaWebApi.Domains.TipoResposta)">
+            <summary>
+            Atualiza um tipo resposta existente
+            </summary>
+            <param name="id">ID do tipo resposta que será atualizado</param>
+            <param name="tipoRespostaAtualizado0">Objeto com as novas informações</param>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.ITipoRespostaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um tipo resposta
+            </summary>
+            <param name="id">ID do tipo resposta que será deletado</param>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.ITurnoRepository.Cadastrar(InovaWebApi.Domains.Turno)">
+            <summary>
+            Cadastra um novo turno
+            </summary>
+            <param name="novoTurno">Objeto com as informações de cadastro</param>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.ITurnoRepository.Listar">
+            <summary>
+            Lista todos os turno
+            </summary>
+            <returns>Uma lista de turno</returns>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.ITurnoRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um turno por ID
+            </summary>
+            <param name="id">ID do turno que será buscado</param>
+            <returns>Um turno buscado</returns>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.ITurnoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um turno
+            </summary>
+            <param name="id">ID do turno que será deletado</param>
+        </member>
+        <member name="M:InovaWebApi.Interfaces.ITurnoRepository.Atualizar(System.Int32,InovaWebApi.Domains.Turno)">
+            <summary>
+            Atualiza um turno existente
+            </summary>
+            <param name="id">ID do turno que será atualizado</param>
+            <param name="turnoatualizado">Objeto com as novas informações</param>
+        </member>
+        <member name="T:InovaWebApi.Repositories.EmpresaRepository">
+            <summary>
+            Repositório responsável pelos eventos
+            </summary>
+        </member>
+        <member name="F:InovaWebApi.Repositories.EmpresaRepository.ctx">
+            <summary>
+            Objeto contexto por onde serão chamados os métodos do EF Core
+            </summary>
+        </member>
+        <member name="M:InovaWebApi.Repositories.EmpresaRepository.Atualizar(System.Int32,InovaWebApi.Domains.Empresa)">
+            <summary>
+            Atualiza uma empresa existente
+            </summary>
+            <param name="id">ID do empresa que será atualizado</param>
+            <param name="empresaAtualizada">Objeto com as novas informações</param>
+        </member>
+        <member name="M:InovaWebApi.Repositories.EmpresaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma empresa por ID
+            </summary>
+            <param name="id">ID do empresa que será buscado</param>
+            <returns>Um empresa buscado</returns>
+        </member>
+        <member name="M:InovaWebApi.Repositories.EmpresaRepository.Cadastrar(InovaWebApi.Domains.Empresa)">
+            <summary>
+            Cadastra uma nova empresa
+            </summary>
+            <param name="novaEmpresa">Objeto com as informações de cadastro</param>
+        </member>
+        <member name="M:InovaWebApi.Repositories.EmpresaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma empresa
+            </summary>
+            <param name="id">ID da empresa que será deletado</param>
+        </member>
+        <member name="M:InovaWebApi.Repositories.EmpresaRepository.Listar">
+            <summary>
+            Lista todos as empresas
+            </summary>
+            <returns>Uma lista de empresa</returns>
+        </member>
+        <member name="M:InovaWebApi.Repositories.EmpresaRepository.ListarPorOrdemAlfabetica">
+            <summary>
+            Lista todos as emrpresas em ordem alfabetica
+            </summary>
+            <returns>Uma lista de empresa</returns>
+        </member>
+        <member name="T:InovaWebApi.Repositories.TipoRespostaRepository">
+            <summary>
+            Repositório responsável pelos eventos
+            </summary>
+        </member>
+        <member name="F:InovaWebApi.Repositories.TipoRespostaRepository.ctx">
+            <summary>
+            Objeto contexto por onde serão chamados os métodos do EF Core
+            </summary>
+        </member>
+        <member name="M:InovaWebApi.Repositories.TipoRespostaRepository.Atualizar(System.Int32,InovaWebApi.Domains.TipoResposta)">
+            <summary>
+            Atualiza um tipo resposta existente
+            </summary>
+            <param name="id">ID do tipo resposta que será atualizado</param>
+            <param name="tipoRespostaAtualizada">Objeto com as novas informações</param>
+        </member>
+        <member name="M:InovaWebApi.Repositories.TipoRespostaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um tipo resposta por ID
+            </summary>
+            <param name="id">ID do tipo resposta que será buscado</param>
+            <returns>Um tipo resposta buscado</returns>
+        </member>
+        <member name="M:InovaWebApi.Repositories.TipoRespostaRepository.Cadastrar(InovaWebApi.Domains.TipoResposta)">
+            <summary>
+            Cadastra um novo tipo resposta
+            </summary>
+            <param name="novoTipoResposta">Objeto com as informações de cadastro</param>
+        </member>
+        <member name="M:InovaWebApi.Repositories.TipoRespostaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um tipo resposta
+            </summary>
+            <param name="id">ID do tipo resposta que será deletado</param>
+        </member>
+        <member name="M:InovaWebApi.Repositories.TipoRespostaRepository.Listar">
+            <summary>
+            Lista todos os tipos resposta
+            </summary>
+            <returns>Uma lista de eventos</returns>
+        </member>
+        <member name="T:InovaWebApi.Repositories.TurnoRepository">
+            <summary>
+            Repositório responsável pelos eventos
+            </summary>
+        </member>
+        <member name="F:InovaWebApi.Repositories.TurnoRepository.ctx">
+            <summary>
+            Objeto contexto por onde serão chamados os métodos do EF Core
+            </summary>
+        </member>
+        <member name="M:InovaWebApi.Repositories.TurnoRepository.Atualizar(System.Int32,InovaWebApi.Domains.Turno)">
+            <summary>
+            Atualiza um turno existente
+            </summary>
+            <param name="id">ID do turno que será atualizado</param>
+            <param name="turnoatuAlizado">Objeto com as novas informações</param>
+        </member>
+        <member name="M:InovaWebApi.Repositories.TurnoRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um turno por ID
+            </summary>
+            <param name="id">ID do turno que será buscado</param>
+            <returns>Um turno buscado</returns>
+        </member>
+        <member name="M:InovaWebApi.Repositories.TurnoRepository.Cadastrar(InovaWebApi.Domains.Turno)">
+            <summary>
+            Cadastra um novo turno
+            </summary>
+            <param name="novoTurno">Objeto com as informações de cadastro</param>
+        </member>
+        <member name="M:InovaWebApi.Repositories.TurnoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um turno
+            </summary>
+            <param name="id">ID do turno que será deletado</param>
+        </member>
+        <member name="M:InovaWebApi.Repositories.TurnoRepository.Listar">
+            <summary>
+            Lista todos os turnos
+            </summary>
+            <returns>Uma lista de turnos</returns>
+        </member>
+    </members>
+</doc>
